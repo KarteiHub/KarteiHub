@@ -1,10 +1,10 @@
 Card() = function() {
 	this.id;
 	this.question;
-	this.awnser;
+	this.answer;
 	this.creationDate;
 	this.box;
-	this.showingAwnser = false;
+	this.showingAnswer = false;
 }
 
 Card.getId = function() {
@@ -15,16 +15,16 @@ Card.getQuestion = function() {
 	return this.question;
 }
 
-Card.getAwnser = function() {
-	return this.awnser;
+Card.getAnswer = function() {
+	return this.answer;
 }
 
 Card.getCreationDate = function() {
 	return this.creationDate;
 }
 
-Card.isShowingAwnser = function() {
-	return this.showingAwnser;
+Card.isShowingAnswer = function() {
+	return this.showingAnswer;
 }
 
 Card.getBox = function() {

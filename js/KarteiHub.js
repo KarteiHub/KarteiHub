@@ -3,15 +3,15 @@ KarteiHub = function() {
 	this.boxes;
 }
 
-KarteiHub.showAwnser = function(boolean showAwnser) {
+KarteiHub.showAnswer = function(showAnswer) {
 	if (showSolution) {
-		KarteiHubUI.showAwnser(getActiveCard());
+		KarteiHubUI.showAnswer(getActiveCard());
 	} else {
 		KarteiHubUI.showQuestion(getActiveCard());
 	}
 }
 
-KarteiHub.awnser = function(boolean correct) {
+KarteiHub.answer = function(correct) {
 	if (correct) {
 		$.post("../action.php", { 	action: "right",
 									id: KarteiHub.getActiveCard().getId() },
@@ -41,7 +41,7 @@ KarteiHub.loadBoxes = function() {
 				// need to check for correct formatting later
 				boxes = new Array(html);
 				this.boxes = new Array();
-				for (int i = 0; i < boxes.size(); i++) {
+				for (i = 0; i < boxes.size(); i++) {
 					this.boxes[i] = new Box(boxes[i]);
 				}
 			});
@@ -56,7 +56,7 @@ KarteiHub.getActiveCard = function() {
 }
 
 KarteiHub.orderStack = function() {
-	for (int i = 0; i < cards.size(); i++) {
+	for (i = 0; i < cards.size(); i++) {
 		if (i == cards.size-1) {
 			cards[i] = null;
 			break;

@@ -1,4 +1,4 @@
-Box = function(var id) {
+Box = function(id) {
 	this.id = id;
 	// number of all active cards
 	this.activeCards;
